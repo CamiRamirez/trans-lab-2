@@ -1,0 +1,14 @@
+{
+  "name": "translab",
+  "version": "0.0.1",
+  "description": "mejora de proyecto translab, con testing y firebase",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha "
+  },
+  "keywords": [
+    "translab"
+  ],
+  "author": "Camila Constanza Ramírez Ponce",
+  "license": "ISC"
+}
