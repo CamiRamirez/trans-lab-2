@@ -70,7 +70,7 @@
           <div class="bg-dark p-4">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" onclick="saldo()">
                   <i class="fas fa-dollar-sign"> </i> Ver saldo</a>
               </li>
               <li class="nav-item">
@@ -82,12 +82,12 @@
                   <i class="fas fa-user"> </i> Perfil</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" onclick="questions()">
                   <i class="fas fa-question"> </i> Preguntas Frecuentes</a>
               </li>
               <li class="nav-item">
 
-                <a class="nav-link" href="#">
+                <a class="nav-link" onclick="home()">
                   <i class="fas fa-arrow-right"></i> Home</a>
               </li>
               <li class="nav-item">
@@ -108,7 +108,7 @@
   <div id="options">
     <div class="col-md-6 offset-md-3"></div>
     <div class="col-md-6 offset-md-3">
-      <a>
+      <a onclick="saldo()">
         <button type="button" class="btn btn-secondary saldo">VER SALDO</button>
       </a>
       <a>
@@ -117,7 +117,7 @@
       <a onclick="perfil()">
         <button type="button" class="btn btn-secondary">PERFIL</button>
       </a>
-      <a>
+      <a onclick="questions()">
         <button type="button" class="btn btn-secondary">PREGUNTAS FRECUENTES</button>
       </a>
     </div>
@@ -146,11 +146,109 @@
     </div>
     <!-- contenedor de tarjetas -->
     <div class="col-md-6 offset-md-3 showCards" id="containerCards"></div>
-  
+
   </div>
 
 
+  <!-- PESTAÑA VER SALDO-->
+  <div class="container-fluid" id="seccionSaldo">
+    <input type="number" class="col-md-6 offset-md-3 numberCard" id="numberCards" placeholder="Número tarjeta">
+    <select class="col-md-6 offset-md-3" name="listCard" id="listCards"></select>
+    <button class="col-md-6 offset-md-3" id="btnVerSaldo">Ver saldo</button>
+    <div class="col-md-6 offset-md-3 navBlack"></div>
+    <div class="col-md-6 offset-md-3 contenedorSaldo" id="contenedorSaldos"></div>
+  </div>
 
+  <!-- PESTAÑA CALCULAR TARIFA-->
+  <div class="container-fluid" id="seccionTarifa">
+    <input type="number" class="col-md-6 offset-md-3 numberCard" id="numberCards" placeholder="Número tarjeta">
+    <select class="col-md-6" name="tarifa" id="tarifa"></select>
+    <select class="col-md-6" name="tarjeta" id="tarjeta"></select>
+    <button class="col-md-6 offset-md-3" id="btnCalcular">Calcular</button>
+    <!-- <div class="col-md-6 offset-md-3 navBlack"></div>
+    <div class="col-md-6 offset-md-3 contenedorSaldo" id="contenedorSaldos"></div> -->
+  </div>
+
+
+  <!-- PESTAÑA PREGUNTAS FRECUENTES -->
+  <div class="preguntas" id="seccionPreguntas">
+    <div class="col-md-12 questionsCol">
+      <h1 id="titleQuestions">Preguntas Frecuentes</h1>
+    </div>
+    <!-- PREGUNTAS-->
+    <div class="col-md-6 offset-md-3 panel-group" id="accordion">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="titleCollapse">
+              Problemas y cuidados de la tarjeta TransLab</a>
+          </h4>
+        </div>
+        <div id="collapse1" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <p>
+              <strong>¿Qué cuidados requiere la tarjeta para mantenerla en buenas condiciones?</strong>
+            </p>
+            <p>Los cuidados de tu tarjeta son simples. Sólo debes evitar exponerla al calor, doblarla o quebrarla. Te recomendamos
+              tenerla en un tarjetero plástico para aumentar su vida útil.</p>
+
+            <p>
+              <strong>¿Dónde puedo cambiar mi tarjeta TransLab en caso de falla?</strong> Si tu tarjeta no funciona y tiene daños
+              no atribuibles al usuario, llévala a una Oficina de Servicio al Cliente donde será cambiada por una nueva,
+              sólo si se comprueba la falla. Si la tarjeta dañada tiene saldo, será traspasado en cinco días hábiles.</p>
+
+            <p>
+              <strong>Si me equivoco de bus y paso la tarjeta, ¿me devuelven la carga? </strong>No, el pasaje se cobra automáticamente
+              sin devolución.</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="titleCollapse">
+              Puntos y centros TransLab</a>
+          </h4>
+        </div>
+        <div id="collapse2" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>
+              <strong>¿Qué es un Centro TransLab?</strong>Son oficinas donde puedes comprar, cargar y consultar el saldo de tu Translab,
+              además de activar cargas remotas. La mayoría de los Centro Translab son locales compartidos con servicios de
+              atención de Servipag y ServiEstado.</p>
+            <p>
+              <strong>¿Qué es un Punto Translab?</strong>
+              Un Punto Translab es un comercio que además de vender productor y servicios, está asociado al sistema de carga Translab por
+              lo cual sólo puedes cargar tu tarjeta Translab en ellos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="titleCollapse">
+              Carga online y convenios</a>
+          </h4>
+        </div>
+        <div id="collapse3" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>
+              <strong>¿En qué consiste la carga online?</strong>
+              Es un tipo de carga que se puede realizar a través de internet.</p>
+            <p>
+              <strong>¿Qué tipos de Carga Remotas existen actualmente?</strong>
+              Existen las siguientes opciones:</p>
+            <p>
+              <strong>Internet de bancos</strong>
+              <li> www.bancoestado.cl</li>
+              <li>www.bancodechile.cl</li>
+              <li>www.bci.cl</li>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
