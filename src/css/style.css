@@ -204,6 +204,31 @@
   padding: 0;
   width: 100%;
 }
+/*SECCION CALCULAR TARIFA*/
+#btnCalcular{
+color: white;
+font-size: 1.5em;
+background-color: orange;
+border: none;
+border-radius: 0.3em;
+margin-top: 2em;
+height: 2em;
+cursor: pointer;
+}
+#tarifa{
+  color: black;
+  background-color: white;
+  border-radius: 0.3em;
+  margin-top: 2em;
+  height: 3em;
+}
+#tarjeta{
+  color: black;
+  background-color: white;
+  border-radius: 0.3em;
+  margin-top: 2em;
+  height: 3em;
+}
 
 /*display para secciones*/
 #options{
@@ -219,5 +244,8 @@
   display: none;
 }
 #seccionPreguntas{
+  display: none;
+}
+#seccionTarifa{
   display: none;
 }

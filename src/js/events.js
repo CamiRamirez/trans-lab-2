@@ -5,6 +5,7 @@ document.getElementById('options').style.display = 'none';
 document.getElementById('seccionPerfil').style.display = 'block';
 document.getElementById('seccionSaldo').style.display = 'none';
 document.getElementById('accordion').style.display = 'none';
+document.getElementById('seccionTarifa').style.display = 'none';
 };
 
 
@@ -14,6 +15,7 @@ function saldo(){
   document.getElementById('seccionPerfil').style.display = 'none';
   document.getElementById('seccionSaldo').style.display = 'block';
   document.getElementById('seccionPreguntas').style.display = 'none';
+  document.getElementById('seccionTarifa').style.display = 'none';
 };
 
 //funcion para volver a pantalla inicial
@@ -22,6 +24,7 @@ function saldo(){
     document.getElementById('seccionPerfil').style.display = 'none';
     document.getElementById('seccionSaldo').style.display = 'none';
     document.getElementById('seccionPreguntas').style.display = 'none';
+    document.getElementById('seccionTarifa').style.display = 'none';
   }
 
   function questions(){
@@ -29,4 +32,13 @@ function saldo(){
     document.getElementById('seccionPerfil').style.display = 'none';
     document.getElementById('seccionSaldo').style.display = 'none';
     document.getElementById('seccionPreguntas').style.display = 'block';
+    document.getElementById('seccionTarifa').style.display = 'none';
+  }
+
+  function tarifa(){
+    document.getElementById('options').style.display = 'none';
+    document.getElementById('seccionPerfil').style.display = 'none';
+    document.getElementById('seccionSaldo').style.display = 'none';
+    document.getElementById('seccionPreguntas').style.display = 'none';
+    document.getElementById('seccionTarifa').style.display = 'block';
   }
