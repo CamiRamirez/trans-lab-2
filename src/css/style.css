@@ -61,6 +61,7 @@
 
 .backStyle{
   background-color: #D8D8D8;
+  padding: 0;
 }
 
 /* SECCION DE PREGUNTAS FRECUENTES */
@@ -115,9 +116,9 @@
   border: none;
   border-radius: 0.3em;
   margin-top: 2em;
-  width: 80%;
+  
   height: 3em;
-  margin-left: 10%;
+  
 }
 
 .inputCard{
@@ -126,14 +127,14 @@
   border: 0.5px solid gray;
   border-radius: 0.3em;
   margin-top: 2em;
-  width: 80%;
+  
   height: 3em;
-  margin-left: 10%;
+
 }
 
 .rememberCard{
   color: #424242;
-  margin-left: 10%;
+  
 }
 
 #agreeCard{
@@ -143,9 +144,8 @@
   border: none;
   border-radius: 0.3em;
   margin-top: 0.3em;
-  width: 80%;
   height: 2em;
-  margin-left: 10%;
+  
 }
 
 #containerCards div{
@@ -155,9 +155,8 @@
   border: none;
   border-radius: 0.3em;
   margin-top: 1em;
-  width: 80%;
   height: 2em;
-  margin-left: 10%;
+  
 }
 
 /* VER SALDO */
@@ -218,5 +217,8 @@
 
 /*display para secciones*/
 #menuDesplegable{
+  display: none;
+}
+#seccionPerfil{
   display: none;
 }

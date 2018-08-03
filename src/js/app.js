@@ -1,4 +1,4 @@
-window.validatePass = function enter() {
+function enter() {
   const pass = document.getElementById('inputPassword').value;
   if (pass.length <= 8) {
     document.getElementById('loginUser').style.display = 'none';

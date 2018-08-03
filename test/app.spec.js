@@ -1,6 +1,6 @@
 const assert = require('chai').assert;
 global.window = global;
-require('../src/js/app'); //Sólo enlaza el archivo, parecido al script de html
+require('../src/js/app.js'); //Sólo enlaza el archivo, parecido al script de html
 
 describe('Validar contraseña', () => { 
   describe('Debería verificar que tenga máximo 8 caracteres', () => {

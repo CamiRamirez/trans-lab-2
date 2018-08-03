@@ -25,7 +25,7 @@
     </div>
     </div>
     <!-- Login -->
-    <div class="container formLogin">
+    <div class="container-fluid formLogin">
       <div class="row">
         <!-- div vacio para dar el espacio -->
         <div class="col-md-6 offset-md-3"></div>
@@ -78,7 +78,7 @@
                   <i class="fas fa-calculator"> </i> Calcular Tarifa</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" onclick="perfil()">
                   <i class="fas fa-user"> </i> Perfil</a>
               </li>
               <li class="nav-item">
@@ -105,27 +105,50 @@
   <!-- fin de seccion menú desplegable -->
 
   <!--BOTONES CON OPCIONES  -->
-  <div class="row">
-    <div class="col-sm"></div>
-    <div class="col-sm">
+  <div id="options">
+    <div class="col-md-6 offset-md-3"></div>
+    <div class="col-md-6 offset-md-3">
       <a>
         <button type="button" class="btn btn-secondary saldo">VER SALDO</button>
       </a>
       <a>
         <button type="button" class="btn btn-secondary">CALCULAR TARIFA</button>
       </a>
-      <a>
+      <a onclick="perfil()">
         <button type="button" class="btn btn-secondary">PERFIL</button>
       </a>
       <a>
         <button type="button" class="btn btn-secondary">PREGUNTAS FRECUENTES</button>
       </a>
     </div>
-    <div class="col-sm"></div>
+    <div class="col-md-6 offset-md-3"></div>
   </div>
 
 
-<!-- PESTAÑA PERFIL -->
+  <!-- PESTAÑA PERFIL -->
+  <div class="container-fluid" id="seccionPerfil">
+    <div class="row">
+      <div class="col-md-6 offset-md-3 perfilCol">
+        <img src="img/perfilpng.png" alt="fotoperfil" id="fotoperfil">
+      </div>
+    </div>
+
+    <!-- mostrar mail bajo foto -->
+    <div class="col-md-6 offset-md-3 showMail"></div>
+    <!-- input para ingresar numero de tarjeta -->
+    <input type="number" class="col-md-6 offset-md-3 inputCard" id="inputCards" placeholder="Número tarjeta">
+    <!-- chekbox para recordar tarjeta -->
+    <div class="col-md-6 offset-md-3 rememberCard">
+      <input type="checkbox">Recordar tarjeta</div>
+    <!-- boton para ingresar tarjeta-->
+    <div class="col-md-6 offset-md-3">
+      <button id="agreeCard">Ingresar tarjeta</button>
+    </div>
+    <!-- contenedor de tarjetas -->
+    <div class="col-md-6 offset-md-3 showCards" id="containerCards"></div>
+  
+  </div>
+
 
 
 
@@ -151,7 +174,7 @@
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
-
+  <script src="src/js/events.js"></script>
   <script src="src/js/app.js"></script>
 </body>
 
