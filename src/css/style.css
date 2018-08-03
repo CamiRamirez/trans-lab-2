@@ -1,0 +1,222 @@
+/* SECCION DE LOGIN */
+.logo{
+  text-align: center;
+}
+
+#logoLogin{
+  width: 10em;
+  height: 10em;
+  margin-top: 3em;
+}
+
+#tituloLogin{
+  color: orange;
+  font-size: 2.5em;
+}
+
+#nameWeb{
+  color: gray;
+  text-align: center;
+}
+
+.formLogin{
+  color: white;
+}
+
+#forgotPass{
+  font-size: 1em;
+  margin-top: 1em;
+}
+
+.loginUser{
+  background-color: #424242;
+  height: 50em;
+  width: 100%;
+}
+
+.btn-primary{
+  margin-top: 2em;
+  width: 100%;
+  background-color: orange;
+  border: none;
+  color: #424242;
+}
+
+/* SECCION DE INDEX */
+.btn-secondary{
+  width: 80%;
+  background-color: orange;
+  border: none;
+  color: white;
+  margin: 3%;
+  margin-left: 10%;
+}
+.saldo{
+  margin-top: 6em;
+}
+
+.nav-link{
+  color: white;
+}
+
+.backStyle{
+  background-color: #D8D8D8;
+}
+
+/* SECCION DE PREGUNTAS FRECUENTES */
+
+.questionsCol{
+  background-color: orange;
+  height: 15em;
+}
+
+#titleQuestions {
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  margin-top: 3em;
+}
+
+.panel-heading{
+  background-color: white;
+  margin: 1em;
+  border-radius: 5px;
+}
+.panel-body{
+  background-color: white;
+  margin: 1em;  
+}
+
+.titleCollapse{
+  color: black;
+  font-size: 0.7em;
+ margin-left: 1em;
+}
+
+#accordion{
+  margin-top: 2.5em;
+}
+
+/* SECCION DE PERFIL */
+.perfilCol{
+  background-color: orange;
+  height: 15em;
+}
+
+#fotoperfil {
+  text-align: center;
+  width: 100%;
+  margin-top: 1.5em;
+}
+
+.showMail{
+  color: black;
+  background-color: white;
+  border: none;
+  border-radius: 0.3em;
+  margin-top: 2em;
+  width: 80%;
+  height: 3em;
+  margin-left: 10%;
+}
+
+.inputCard{
+  color: black;
+  background-color: #D8D8D8;
+  border: 0.5px solid gray;
+  border-radius: 0.3em;
+  margin-top: 2em;
+  width: 80%;
+  height: 3em;
+  margin-left: 10%;
+}
+
+.rememberCard{
+  color: #424242;
+  margin-left: 10%;
+}
+
+#agreeCard{
+  color: white;
+  font-size: 1.5em;
+  background-color: orange;
+  border: none;
+  border-radius: 0.3em;
+  margin-top: 0.3em;
+  width: 80%;
+  height: 2em;
+  margin-left: 10%;
+}
+
+#containerCards div{
+  color: black;
+  text-align: center;
+  background-color: white;
+  border: none;
+  border-radius: 0.3em;
+  margin-top: 1em;
+  width: 80%;
+  height: 2em;
+  margin-left: 10%;
+}
+
+/* VER SALDO */
+.numberCard{
+  color: black;
+  background-color: #D8D8D8;
+  border: 0.5px solid gray;
+  border-radius: 0.3em;
+  margin-top: 4em;
+  width: 80%;
+  height: 3em;
+  margin-left: 10%;
+}
+
+#listCards{
+  color: black;
+  background-color: white;
+  border-radius: 0.3em;
+  margin-top: 2em;
+  width: 80%;
+  height: 3em;
+  margin-left: 10%;
+}
+
+#btnVerSaldo{
+  color: white;
+  font-size: 1.5em;
+  background-color: orange;
+  border: none;
+  border-radius: 0.3em;
+  margin-top: 2em;
+  width: 50%;
+  height: 2em;
+  margin-left: 25%;
+  cursor: pointer;
+}
+
+.navBlack{
+  background-color: black;
+  margin-top: 2em;
+  width: 80%;
+  height: 2em;
+  margin-left: 10%;
+}
+
+.contenedorSaldo{
+  color: black;
+  background-color: orange;
+  width: 80%;
+  height: 8em;
+  margin-left: 10%;
+}
+
+.formatoMenu{
+  padding: 0;
+  width: 100%;
+}
+
+/*display para secciones*/
+#menuDesplegable{
+  display: none;
+}
