@@ -54,9 +54,16 @@
 .saldo{
   margin-top: 6em;
 }
-
+.nav-item{
+  color: white;
+}
 .nav-link{
   color: white;
+  cursor: pointer;
+}
+.nav-item:hover{
+  color: orange;
+  cursor: pointer;
 }
 
 .backStyle{
@@ -115,7 +122,7 @@
   border: none;
   border-radius: 0.3em;
   margin-top: 2em;
-  height: 3em;
+ 
   
 }
 
@@ -248,4 +255,7 @@ cursor: pointer;
 }
 #seccionTarifa{
   display: none;
+}
+#showEmail{
+  text-align: center;
 }

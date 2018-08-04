@@ -4,8 +4,9 @@ function perfil(){
 document.getElementById('options').style.display = 'none';
 document.getElementById('seccionPerfil').style.display = 'block';
 document.getElementById('seccionSaldo').style.display = 'none';
-document.getElementById('accordion').style.display = 'none';
 document.getElementById('seccionTarifa').style.display = 'none';
+document.getElementById('seccionPreguntas').style.display = 'none';
+showMail()
 };
 
 
@@ -16,6 +17,7 @@ function saldo(){
   document.getElementById('seccionSaldo').style.display = 'block';
   document.getElementById('seccionPreguntas').style.display = 'none';
   document.getElementById('seccionTarifa').style.display = 'none';
+  
 };
 
 //funcion para volver a pantalla inicial
@@ -42,3 +44,20 @@ function saldo(){
     document.getElementById('seccionPreguntas').style.display = 'none';
     document.getElementById('seccionTarifa').style.display = 'block';
   }
+
+  function cerrar(){
+    document.getElementById('options').style.display = 'none';
+    document.getElementById('seccionPerfil').style.display = 'none';
+    document.getElementById('seccionSaldo').style.display = 'none';
+    document.getElementById('seccionPreguntas').style.display = 'none';
+    document.getElementById('seccionTarifa').style.display = 'none';
+    document.getElementById('loginUser').style.display = 'block';
+    document.getElementById('menuDesplegable').style.display = 'none';
+  }
+
+  
+function enter() {
+    document.getElementById('loginUser').style.display = 'none';
+    document.getElementById('menuDesplegable').style.display = 'block';
+    document.getElementById('options').style.display = 'block';
+}

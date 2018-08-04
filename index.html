@@ -9,7 +9,7 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="../trans-lab-2/src/css/style.css">
+  <link rel="stylesheet" href="src/css/style.css">
   <title>Translab</title>
 </head>
 
@@ -19,7 +19,7 @@
   <section class="loginUser" id="loginUser">
     <div class="logo">
       <div class="col-12">
-        <img src="../trans-lab/img/imagen.png" alt="logo" id="logoLogin">
+        <img src="img/imagen.png" alt="logo" id="logoLogin">
         <h1 id="tituloLogin">TRANS-LAB</h1>
       </div>
     </div>
@@ -40,7 +40,7 @@
               <label for="inputPassword"></label>
               <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña">
             </div>
-            <button type="button" class="btn btn-primary" id="btnIngresar" onclick="enter()">INICIAR SESIÓN</button>
+            <button type="button" class="btn btn-primary" id="btnIngresar" onclick="validateLogin()">INICIAR SESIÓN</button>
             <p id="incorrectPass"></p>
             <h2 id="forgotPass">¿Olvidaste tu contraseña?</h2>
           </form>
@@ -92,7 +92,7 @@
               </li>
               <li class="nav-item">
 
-                <a class="nav-link" href="#">
+                <a class="nav-link" onclick="cerrar()">
                   <i class="fas fa-arrow-right"></i>Cerrar sesión</a>
               </li>
             </ul>
@@ -132,19 +132,11 @@
         <img src="img/perfilpng.png" alt="fotoperfil" id="fotoperfil">
       </div>
     </div>
-
-    <!-- mostrar mail bajo foto -->
-    <div class="col-md-6 offset-md-3 showMail"></div>
-    <!-- input para ingresar numero de tarjeta -->
-    <input type="number" class="col-md-6 offset-md-3 inputCard" id="inputCards" placeholder="Número tarjeta">
-    <!-- chekbox para recordar tarjeta -->
-    <div class="col-md-6 offset-md-3 rememberCard">
-      <input type="checkbox">Recordar tarjeta</div>
-    <!-- boton para ingresar tarjeta-->
-    <div class="col-md-6 offset-md-3">
-      <button id="agreeCard">Ingresar tarjeta</button>
+    <div class="col-md-6 offset-md-3 showMail" id="showEmail"></div>
+    <input type="number" class="col-md-6 offset-md-3 inputCard" id="inputCards" placeholder="Ingrese número de tarjeta">
+    <div class="col-md-4 offset-md-4">
+      <button id="agreeCard" onclick="sendNumber()">Agregar tarjeta</button>
     </div>
-    <!-- contenedor de tarjetas -->
     <div class="col-md-6 offset-md-3 showCards" id="containerCards"></div>
 
   </div>
@@ -153,8 +145,8 @@
   <!-- PESTAÑA VER SALDO-->
   <div class="container-fluid" id="seccionSaldo">
     <input type="number" class="col-md-6 offset-md-3 numberCard" id="numberCards" placeholder="Número tarjeta">
-    <select class="col-md-6 offset-md-3" name="listCard" id="listCards"></select>
-    <button class="col-md-6 offset-md-3" id="btnVerSaldo">Ver saldo</button>
+    <select class="col-md-6 offset-md-3 selectpicker" id="listCards" size="4"></select>
+    <button class="col-md-6 offset-md-3" id="btnVerSaldo" onclick="infoBip()">Ver saldo</button>
     <div class="col-md-6 offset-md-3 navBlack"></div>
     <div class="col-md-6 offset-md-3 contenedorSaldo" id="contenedorSaldos"></div>
   </div>
@@ -162,8 +154,10 @@
   <!-- PESTAÑA CALCULAR TARIFA-->
   <div class="container-fluid" id="seccionTarifa">
     <input type="number" class="col-md-6 offset-md-3 numberCard" id="numberCards" placeholder="Número tarjeta">
-    <select class="col-md-6" name="tarifa" id="tarifa"></select>
-    <select class="col-md-6" name="tarjeta" id="tarjeta"></select>
+    <div class="col-md-6 offset-md-3">
+      <select name="tarifa" id="tarifa"></select>
+      <select name="tarjeta" id="tarjeta"></select>
+    </div>
     <button class="col-md-6 offset-md-3" id="btnCalcular">Calcular</button>
     <!-- <div class="col-md-6 offset-md-3 navBlack"></div>
     <div class="col-md-6 offset-md-3 contenedorSaldo" id="contenedorSaldos"></div> -->
@@ -253,19 +247,20 @@
 
 
 
-  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
   <script>
     // Initialize Firebase
     var config = {
-      apiKey: "AIzaSyBKiJQLoFfkoWJFkEtZB0GXyLNQUzwLQIA",
-      authDomain: "translab2-17742.firebaseapp.com",
-      databaseURL: "https://translab2-17742.firebaseio.com",
-      projectId: "translab2-17742",
-      storageBucket: "translab2-17742.appspot.com",
-      messagingSenderId: "36912712798"
+      apiKey: "AIzaSyDe6nuTSTLQLJtfIRFn_8_xkpdwR50I2-g",
+      authDomain: "translab2-0.firebaseapp.com",
+      databaseURL: "https://translab2-0.firebaseio.com",
+      projectId: "translab2-0",
+      storageBucket: "",
+      messagingSenderId: "120692340094"
     };
     firebase.initializeApp(config);
   </script>
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -273,7 +268,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="src/js/events.js"></script>
-  <script src="src/js/app.js"></script>
+  <script src="src/js/validate.js"></script>
+  <script src="src/js/data.js"></script>
+  <script src="src/js/perfil.js"></script>
+  <script src="src/js/firebase.js"></script>
 </body>
 
 </html>
