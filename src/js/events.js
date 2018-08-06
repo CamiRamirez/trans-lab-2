@@ -43,6 +43,7 @@ function saldo(){
     document.getElementById('seccionSaldo').style.display = 'none';
     document.getElementById('seccionPreguntas').style.display = 'none';
     document.getElementById('seccionTarifa').style.display = 'block';
+
   }
 
   function cerrar(){
