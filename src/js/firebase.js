@@ -52,4 +52,12 @@ firebase.database().ref()
     <option>${newNumber.val().number}</option>
     </select>
     ` + listCards.innerHTML;
+
+
+    tarjeta.innerHTML = `
+    
+    <option>${newNumber.val().number}</option>
+    
+    ` + tarjeta.innerHTML;
+   
   });

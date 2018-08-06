@@ -1,9 +1,9 @@
 //FETCH
 
-window.infoBip = () => {
-  let number = document.getElementById('inputCards').value;
-  number.innerHTML = '';
-  fetch(`http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=`+ number)
+ function infoBip() {
+  let number = document.getElementById('numberCards').value;
+  console.log(number);
+  fetch(`http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${number}`)
     .then(response => response.json())
     .then(bipJSON => {
       console.log(bipJSON);
@@ -14,7 +14,7 @@ window.infoBip = () => {
       console.error("No pudimos obtener respuesta a su solicitud");
       console.error("ERROR > " + error.stack);
     });
-
+    number.innerHTML = '';
 }
 
 // recorriendo api bip y mostrando en pantalla
@@ -26,3 +26,4 @@ const numCard = (bipJSON) => {
     showMoney.innerHTML = bipJSON.saldoTarjeta
   };
 }
+

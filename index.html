@@ -145,7 +145,9 @@
   <!-- PESTAÑA VER SALDO-->
   <div class="container-fluid" id="seccionSaldo">
     <input type="number" class="col-md-6 offset-md-3 numberCard" id="numberCards" placeholder="Número tarjeta">
-    <select class="col-md-6 offset-md-3 selectpicker" id="listCards" size="4"></select>
+    <h4 id="subSaldo">Seleccione un número de tarjeta existente</h4>
+    <select class="col-md-6 offset-md-3 selectpicker" id="listCards" size="1"> 
+    </select>
     <button class="col-md-6 offset-md-3" id="btnVerSaldo" onclick="infoBip()">Ver saldo</button>
     <div class="col-md-6 offset-md-3 navBlack"></div>
     <div class="col-md-6 offset-md-3 contenedorSaldo" id="contenedorSaldos"></div>
@@ -155,7 +157,11 @@
   <div class="container-fluid" id="seccionTarifa">
     <input type="number" class="col-md-6 offset-md-3 numberCard" id="numberCards" placeholder="Número tarjeta">
     <div class="col-md-6 offset-md-3">
-      <select name="tarifa" id="tarifa"></select>
+      <select name="tarifa" id="tarifa">
+        <option value="760">Horario alto</option>
+        <option value="680">Horario medio</option>
+        <option value="630">Horario bajo</option>
+      </select>
       <select name="tarjeta" id="tarjeta"></select>
     </div>
     <button class="col-md-6 offset-md-3" id="btnCalcular">Calcular</button>
