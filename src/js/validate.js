@@ -2,6 +2,7 @@
 
 // Funcion para validar email
 window.validateEmail = (email) => {
+  console.log(email)
   if (email.indexOf('@') < 0) {
     return false;
   }

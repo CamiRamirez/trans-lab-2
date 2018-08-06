@@ -157,16 +157,19 @@
   <div class="container-fluid" id="seccionTarifa">
     <input type="number" class="col-md-6 offset-md-3 numberCard" id="numberCards" placeholder="Número tarjeta">
     <div class="col-md-6 offset-md-3">
-      <select name="tarifa" id="tarifa">
+      <select name="tarifa" id="tarifa" onclick="selectOptions()">
+        <option selected disabled>Elige el horario</option>
         <option value="760">Horario alto</option>
         <option value="680">Horario medio</option>
         <option value="630">Horario bajo</option>
       </select>
       <select name="tarjeta" id="tarjeta"></select>
     </div>
-    <button class="col-md-6 offset-md-3" id="btnCalcular">Calcular</button>
-    <!-- <div class="col-md-6 offset-md-3 navBlack"></div>
-    <div class="col-md-6 offset-md-3 contenedorSaldo" id="contenedorSaldos"></div> -->
+    <button class="col-md-6 offset-md-3" id="btnCalcular" onclick="finalRate()">Calcular</button>
+    <div class="col-md-6 offset-md-3 navBlack">Costo pasaje</div>
+    <div class="col-md-6 offset-md-3" id="contenedorTarifa"></div>
+    <div class="col-md-6 offset-md-3 navBlack">Saldo final</div>
+    <div class="col-md-6 offset-md-3" id="contenedorSaldoFinal"></div>
   </div>
 
 
