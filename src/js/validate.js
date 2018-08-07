@@ -1,7 +1,10 @@
-
+let email = document.getElementById('inputEmail').value;
+let pass = document.getElementById('inputPassword').value;
+let bip = document.getElementById('inputCards').value;
 
 // Funcion para validar email
 window.validateEmail = (email) => {
+  
   console.log(email)
   if (email.indexOf('@') < 0) {
     return false;
@@ -47,16 +50,16 @@ window.validatePass = (pass) => {
 
 //Validacion para entrar con login
 window.validateLogin = () => { 
-  const email = document.getElementById('inputEmail').value;
-  const pass = document.getElementById('inputPassword').value;
   window.validateEmail(email);
+  console.log(email)
   window.validatePass(pass);
+  console.log(pass)
   enter();
 }
 
 
 // Funcion para validar tarjeta
-let bip = document.getElementById('inputCards').value;
+
 window.validateCard = (bip) => {
   console.log(bip);
   if (bip.toString().length <= 10) {

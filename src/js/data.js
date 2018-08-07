@@ -1,9 +1,9 @@
 //FETCH que me muestra el saldo
 function infoBip() {
+  validateCard(bip);
   let number = document.getElementById('numberCards').value;
   let numberOfOption = document.getElementById('listCards').value;
-  console.log(numberOfOption);
-  number.innerHTML = '';
+
   fetch(`http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${number || numberOfOption}`)
     .then(response => response.json())
     .then(bipJSON => {
@@ -14,6 +14,7 @@ function infoBip() {
       console.error("No pudimos obtener respuesta a su solicitud");
       console.error("ERROR > " + error.stack);
     });
+  number.innerHTML = '';
 }
 
 // recorriendo api bip y mostrando en pantalla el Saldo
@@ -37,9 +38,10 @@ const selectOptions = () => {
 
 //FETCH CALCULO DE TARIFA 
 function infoTarifa() {
+  validateCard(bip);
   let number2 = document.getElementById('numberCards2').value;
   let numberOfOption2 = document.getElementById('tarjeta').value;
-  number2.innerHTML = '';
+
   fetch(`http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${number2 || numberOfOption2}`)
     .then(response => response.json())
     .then(bipJSON => {
@@ -50,6 +52,7 @@ function infoTarifa() {
       console.error("No pudimos obtener respuesta a su solicitud");
       console.error("ERROR > " + error.stack);
     });
+  number2.innerHTML = '';
 }
 
 //Me muestra el resultado final, saldo menos la tarifa.

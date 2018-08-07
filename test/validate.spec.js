@@ -34,12 +34,6 @@ describe('validar email', () => {
 			assert.equal(validateEmail('email.@com'),false);
 		});
 	});
-	(describe('verificar que exista un dominio', () => {
-		it('Deberia tener un punto y caracteres del alfabeto', () => {
-			assert.equal(validateEmail('translab@email'), false);
-			assert.equal(validateEmail('translab@email.'), false);
-		});
-	}));
 });
 
 
