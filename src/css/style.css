@@ -246,6 +246,7 @@ cursor: pointer;
   border-radius: 0.3em;
   margin-top: 2em;
   height: 3em;
+  width: 40vw;
   
 }
 #tarjeta{
@@ -254,11 +255,9 @@ cursor: pointer;
   border-radius: 0.3em;
   margin-top: 2em;
   height: 3em;
-  
+  width:  40vw;
 }
-#titlesRate{
-  text-align: center;
-}
+
 #contenedorTarifa{
   color: white;
   font-size: 2.5em;
