@@ -133,7 +133,7 @@
       </div>
     </div>
     <div class="col-md-6 offset-md-3 showMail" id="showEmail"></div>
-    <input type="number" class="col-md-6 offset-md-3 inputCard" id="inputCards" placeholder="Ingrese número de tarjeta">
+    <input type="number" class="col-md-6 offset-md-3 inputCard" id="inputCards" placeholder="Ingrese el número de su tarjeta Bip">
     <div class="col-md-4 offset-md-4">
       <button id="agreeCard" onclick="sendNumber()">Agregar tarjeta</button>
     </div>
@@ -144,8 +144,8 @@
 
   <!-- PESTAÑA VER SALDO-->
   <div class="container-fluid" id="seccionSaldo">
-    <input type="number" class="col-md-6 offset-md-3 numberCard" id="numberCards" placeholder="Número tarjeta">
-    <h4 id="subSaldo">Seleccione un número de tarjeta existente</h4>
+    <input type="number" class="col-md-6 offset-md-3 numberCard" id="numberCards" placeholder="Ingrese número de su tarjeta Bip">
+    <h4 id="subSaldo">O seleccione un número de tarjeta existente</h4>
     <select class="col-md-6 offset-md-3 selectpicker" id="listCards" size="1"> 
     </select>
     <button class="col-md-6 offset-md-3" id="btnVerSaldo" onclick="infoBip()">Ver saldo</button>
@@ -156,9 +156,11 @@
   <!-- PESTAÑA CALCULAR TARIFA-->
   <div class="container-fluid" id="seccionTarifa">
     <input type="number" class="col-md-6 offset-md-3 numberCard" id="numberCards2" placeholder="Número tarjeta">
+    <div class="col-md-6 offset-md-3 titlesRate">        
+    </div>
     <div class="col-md-6 offset-md-3">
       <select name="tarifa" id="tarifa" onclick="selectOptions()">
-        <option selected disabled>Elige el horario</option>
+        <option selected disabled>Tarifa</option>
         <option value="760">Horario alto</option>
         <option value="680">Horario medio</option>
         <option value="630">Horario bajo</option>
