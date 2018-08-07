@@ -17,7 +17,6 @@ function saldo(){
   document.getElementById('seccionSaldo').style.display = 'block';
   document.getElementById('seccionPreguntas').style.display = 'none';
   document.getElementById('seccionTarifa').style.display = 'none';
-  
 };
 
 //funcion para volver a pantalla inicial
@@ -43,7 +42,6 @@ function saldo(){
     document.getElementById('seccionSaldo').style.display = 'none';
     document.getElementById('seccionPreguntas').style.display = 'none';
     document.getElementById('seccionTarifa').style.display = 'block';
-
   }
 
   function cerrar(){

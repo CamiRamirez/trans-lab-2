@@ -27,6 +27,7 @@ window.validateEmail = (email) => {
 //Funcion para validar contraseña
 
 window.validatePass = (pass) => {
+  
   console.log(pass)
   if (pass.toString().length <= 8) { //se comprueba el largo, maximo 8 
     if (isNaN(pass) == false) { // se comprueba que sean numeros
@@ -55,7 +56,9 @@ window.validateLogin = () => {
 
 
 // Funcion para validar tarjeta
+let bip = document.getElementById('inputCards').value;
 window.validateCard = (bip) => {
+  console.log(bip);
   if (bip.toString().length <= 10) {
     if (isNaN(bip) == false) {
       if (!bip.toString().trim() == " ") {
