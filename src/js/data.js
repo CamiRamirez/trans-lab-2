@@ -1,6 +1,5 @@
 //FETCH que me muestra el saldo
 function infoBip() {
-  validateCard(bip);
   let number = document.getElementById('numberCards').value;
   let numberOfOption = document.getElementById('listCards').value;
 
@@ -37,7 +36,6 @@ const selectOptions = () => {
 
 //FETCH CALCULO DE TARIFA 
 function infoTarifa() {
-  validateCard(bip);
   let number2 = document.getElementById('numberCards2').value;
   let numberOfOption2 = document.getElementById('tarjeta').value;
 

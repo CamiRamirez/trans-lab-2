@@ -12,6 +12,7 @@ firebase.database().ref('numbercard')
 
 // Guardar los NUMEROS  en database, en una carpeta que se llama numberCard
 function sendNumber() {
+  validateCard(bip);
   if (inputCards.value.length === 0 || inputCards.value === null) {
     alert('Debes ingresar al menos 8 números')
   } else {
@@ -55,9 +56,7 @@ firebase.database().ref()
 
 
     tarjeta.innerHTML = `
-    
     <option>${newNumber.val().number}</option>
-    
     ` + tarjeta.innerHTML;
    
   });
