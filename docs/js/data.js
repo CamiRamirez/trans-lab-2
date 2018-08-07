@@ -7,7 +7,6 @@ function infoBip() {
   fetch(`http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${number || numberOfOption}`)
     .then(response => response.json())
     .then(bipJSON => {
-      console.log(bipJSON);
       numCard(bipJSON);
     })
     .catch(error => {
@@ -45,7 +44,6 @@ function infoTarifa() {
   fetch(`http://bip-servicio.herokuapp.com/api/v1/solicitudes.json?bip=${number2 || numberOfOption2}`)
     .then(response => response.json())
     .then(bipJSON => {
-      console.log(bipJSON);
       finalRate(bipJSON);
     })
     .catch(error => {
@@ -64,8 +62,6 @@ const finalRate = (bipJSON) => {
     const selector = document.getElementById('tarifa');
     let valueRate = selector[selector.selectedIndex].value;
     const total = saldoBipOk - valueRate;
-    console.log(saldoBipOk)
-    console.log(valueRate);
     document.getElementById('contenedorSaldoFinal').innerHTML = '$' + total;
   }
 };
