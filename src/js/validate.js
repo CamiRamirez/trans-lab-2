@@ -61,7 +61,6 @@ window.validateLogin = () => {
 // Funcion para validar tarjeta
 
 window.validateCard = (bip) => {
-  const bip = document.getElementById('inputCards').value;
   console.log(bip);
   if (bip.toString().length <= 10) {
     if (isNaN(bip) == false) {
